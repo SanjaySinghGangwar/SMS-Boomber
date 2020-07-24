@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "Universal Translator"
+rootProject.name = "Sms Boomber"
