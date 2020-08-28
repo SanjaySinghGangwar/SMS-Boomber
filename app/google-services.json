@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "794511230583",
+    "firebase_url": "https://common-apps-c8335.firebaseio.com",
+    "project_id": "common-apps-c8335",
+    "storage_bucket": "common-apps-c8335.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794511230583:android:2c0172725c22a5a4fb6872",
+        "android_client_info": {
+          "package_name": "com.hgnis.reader"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "794511230583-aofijg2r4ur2c91im2tn8a3toln0jbt5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2Ff25FxMvI6A547ps3oof40VVxpxz4Uk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "794511230583-aofijg2r4ur2c91im2tn8a3toln0jbt5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794511230583:android:6e937273b2635e59fb6872",
+        "android_client_info": {
+          "package_name": "com.sanjaysgangwar.clock"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "794511230583-tknapfre7ta6jaqcm59cqb4obl3oa8o8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sanjaysgangwar.clock",
+            "certificate_hash": "ad76d9b473f7824697b9f72b956dedac6ac5f2ca"
+          }
+        },
+        {
+          "client_id": "794511230583-aofijg2r4ur2c91im2tn8a3toln0jbt5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2Ff25FxMvI6A547ps3oof40VVxpxz4Uk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "794511230583-aofijg2r4ur2c91im2tn8a3toln0jbt5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794511230583:android:5ba481e3594f6e43fb6872",
+        "android_client_info": {
+          "package_name": "com.sanjaysgangwar.smsboomber"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "794511230583-aofijg2r4ur2c91im2tn8a3toln0jbt5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2Ff25FxMvI6A547ps3oof40VVxpxz4Uk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "794511230583-aofijg2r4ur2c91im2tn8a3toln0jbt5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -55,6 +55,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         smsManager = SmsManager.getDefault();
         myProgressDialog = new myProgressDialog(this);
+
+
     }
 
     @Override
