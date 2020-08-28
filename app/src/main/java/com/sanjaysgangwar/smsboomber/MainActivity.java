@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     timesEditText.setText("");
                     messageEditText.setText("");
                     myProgressDialog.dismiss();
-                    Toast.makeText(context, "Send Successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Send Successfully...", Toast.LENGTH_SHORT).show();
                 } else {
                     smsManager.sendTextMessage(phNumber, null, message, null, null);
                     sendSms();
