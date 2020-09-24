@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         countryCode = ccp.getSelectedCountryCodeWithPlus();
         phNumber = Objects.requireNonNull(toEditText.getText()).toString().trim();
         String Value = Objects.requireNonNull(timesEditText.getText()).toString().trim();
-        times = Integer.parseInt(Value);
+        times = Integer.parseInt(Value) + 1;
 
         message = Objects.requireNonNull(messageEditText.getText()).toString();
         if (countryCode.isEmpty() || phNumber.isEmpty() || Value.isEmpty() || message.isEmpty()) {
