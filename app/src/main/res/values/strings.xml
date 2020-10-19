@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Sms Boomber</string>
+    <string name="addMobAddID">ca-app-pub-9041694244207254~1091967119</string>
+    <string name="bannerAddTwo">ca-app-pub-9041694244207254/1333502082</string>
+    <string name="bannerAddOne">ca-app-pub-9041694244207254/2213477090</string>
+    <string name="RewardAdd">ca-app-pub-9041694244207254/9860866972</string>
+
 </resources>
