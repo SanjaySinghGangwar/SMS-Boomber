@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     RewardedAdCallback adCallback = new RewardedAdCallback() {
                         @Override
                         public void onRewardedAdOpened() {
-                            Toast.makeText(context, "Watch this full video till we send messages", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, "Watch this full video While we send messages", Toast.LENGTH_SHORT).show();
                         }
 
                         @Override
