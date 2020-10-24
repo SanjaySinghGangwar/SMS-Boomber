@@ -54,9 +54,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     int times = 0;
     SmsManager smsManager;
     myProgressDialog myProgressDialog;
-    AdView adViewOne, adViewTwo;
     RewardedAd rewardedAd;
     int rewardFlag = 0;
+    @BindView(R.id.adViewOne)
+    AdView adViewOne;
+    @BindView(R.id.adViewTwo)
+    AdView adViewTwo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,9 +84,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onInitializationComplete(InitializationStatus initializationStatus) {
             }
         });
-
-        adViewOne = findViewById(R.id.adViewOne);
-        adViewTwo = findViewById(R.id.adViewTwo);
         AdRequest adRequest = new AdRequest.Builder().build();
         adViewOne.loadAd(adRequest);
         adViewTwo.loadAd(adRequest);
