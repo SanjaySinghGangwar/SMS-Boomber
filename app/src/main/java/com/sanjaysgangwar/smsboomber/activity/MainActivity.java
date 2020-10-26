@@ -56,8 +56,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     myProgressDialog myProgressDialog;
     RewardedAd rewardedAd;
     int rewardFlag = 0;
-    @BindView(R.id.adViewOne)
-    AdView adViewOne;
     @BindView(R.id.adViewTwo)
     AdView adViewTwo;
 
@@ -85,7 +83,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
         AdRequest adRequest = new AdRequest.Builder().build();
-        adViewOne.loadAd(adRequest);
         adViewTwo.loadAd(adRequest);
     }
 
@@ -99,6 +96,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (ActivityCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED) {
                     ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.SEND_SMS}, 10);
                 } else {
+                    myProgressDialog.show();
                     validation();
                 }
                 break;
@@ -126,6 +124,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onRewardedAdLoaded() {
                 if (rewardedAd.isLoaded()) {
+                    myProgressDialog.dismiss();
                     RewardedAdCallback adCallback = new RewardedAdCallback() {
                         @Override
                         public void onRewardedAdOpened() {
