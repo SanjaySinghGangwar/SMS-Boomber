@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextInputEditText messageEditText;
     @BindView(R.id.sendButton)
     Button sendButton;
-    String countryCode, phNumber, message;
+    String countryCode, phNumber, message, value;
     int times = 0;
     SmsManager smsManager;
     myProgressDialog myProgressDialog;
@@ -96,7 +96,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (ActivityCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED) {
                     ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.SEND_SMS}, 10);
                 } else {
-                    myProgressDialog.show();
                     validation();
                 }
                 break;
@@ -106,25 +105,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void validation() {
         countryCode = ccp.getSelectedCountryCodeWithPlus();
         phNumber = Objects.requireNonNull(toEditText.getText()).toString().trim();
-        String Value = Objects.requireNonNull(timesEditText.getText()).toString().trim();
-        times = Integer.parseInt(Value) + 1;
-
+        value = Objects.requireNonNull(timesEditText.getText()).toString().trim();
+        if (!value.isEmpty()) {
+            times = Integer.parseInt(value) + 1;
+        }
         message = Objects.requireNonNull(messageEditText.getText()).toString();
-        if (countryCode.isEmpty() || phNumber.isEmpty() || Value.isEmpty() || message.isEmpty()) {
+        if (countryCode.isEmpty() || phNumber.isEmpty() || value.isEmpty() || message.isEmpty()) {
             new StyleableToast.Builder(context).text("Please provide a valid input").textColor(Color.WHITE).backgroundColor(Color.RED).show();
         } else {
+            sendButton.setVisibility(View.GONE);
+            myProgressDialog.show();
             showAdd();
         }
 
     }
 
     private void showAdd() {
+
         rewardedAd = new RewardedAd(this, getString(R.string.RewardAdd));
+        myProgressDialog.dismiss();
         RewardedAdLoadCallback adLoadCallback = new RewardedAdLoadCallback() {
             @Override
             public void onRewardedAdLoaded() {
                 if (rewardedAd.isLoaded()) {
-                    myProgressDialog.dismiss();
                     RewardedAdCallback adCallback = new RewardedAdCallback() {
                         @Override
                         public void onRewardedAdOpened() {
@@ -188,8 +191,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 toEditText.setText("");
                 timesEditText.setText("");
                 messageEditText.setText("");
+                sendButton.setVisibility(View.VISIBLE);
+                new StyleableToast.Builder(context).text("Send Successfully...").textColor(Color.WHITE).backgroundColor(Color.GREEN).show();
                 myProgressDialog.dismiss();
-                Toast.makeText(context, "Send Successfully...", Toast.LENGTH_SHORT).show();
+
             } else {
                 smsManager.sendTextMessage(phNumber, null, message, null, null);
                 sendSms();
