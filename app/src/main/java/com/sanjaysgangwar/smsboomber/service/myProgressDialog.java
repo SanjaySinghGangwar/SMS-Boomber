@@ -9,7 +9,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.sanjaysgangwar.smsboomber.R;
 
 public class myProgressDialog {
-    private Activity contexT;
+    private final Activity contexT;
     private AlertDialog dialog;
 
     public myProgressDialog(Activity mContext) {
@@ -23,11 +23,12 @@ public class myProgressDialog {
         builder.setCancelable(false);
         dialog = builder.create();
         dialog.show();
-
     }
 
     public void dismiss() {
-        dialog.dismiss();
+        if (dialog.isShowing()) {
+            dialog.dismiss();
+        }
 
     }
 }
