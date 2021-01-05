@@ -51,4 +51,7 @@ dependencies {
     implementation 'com.muddzdev:styleabletoast:2.2.3'
     implementation 'com.hbb20:ccp:2.4.2'
 
+    //gif Viewer
+    implementation 'com.github.Cutta:GifView:1.1'
+
 }

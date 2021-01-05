@@ -47,9 +47,7 @@
                     android:id="@+id/to"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:focusable="true"
-                    android:fontFamily="@font/londrinasolidregular"
-                    android:hint="To"
+                    android:hint="Phone Number"
                     android:inputType="number"
                     android:maxLines="1" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -64,9 +62,7 @@
                     android:id="@+id/times"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:focusable="true"
-                    android:fontFamily="@font/londrinasolidregular"
-                    android:hint="Times"
+                    android:hint="Number of SMS"
                     android:inputType="number"
                     android:maxLines="1" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -81,8 +77,6 @@
                     android:id="@+id/message"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:focusable="true"
-                    android:fontFamily="@font/londrinasolidregular"
                     android:hint="Message" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -92,7 +86,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:fontFamily="@font/londrinasolidregular"
                 android:text="Send"
                 app:icon="@drawable/ic_outline_send_24" />
         </LinearLayout>
