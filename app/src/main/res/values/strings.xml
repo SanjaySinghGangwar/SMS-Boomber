@@ -1,12 +1,30 @@
 <resources>
-    <string name="app_name">Sms Boomber</string>
-    <string name="addMobAddID">ca-app-pub-9041694244207254~1091967119</string>
-    <string name="bannerAddTwo">ca-app-pub-9041694244207254/1333502082</string>
-    <string name="bannerAddOne">ca-app-pub-9041694244207254/2213477090</string>
-    <string name="RewardAdd">ca-app-pub-9041694244207254/9860866972</string>
+    <string name="app_name">Sms Bomber</string>
+
     <string name="share">Share</string>
     <string name="other_apps">Other Apps</string>
     <string name="donate">Donate</string>
+
+    //Facebook Ads
     <string name="ads">Ads</string>
+    <string name="Facebook_interstitial">2844541659102655_2844541892435965</string>
+    <string name="FacebookBannerOne">222107262583319_222107475916631</string>
+    <string name="FacebookBannerTwo">424235888655549_424235998655538</string>
+
+
+    //Google ads
+    <string name="addMobAddID">ca-app-pub-9041694244207254~1091967119</string>
+    <string name="bannerAddOne">ca-app-pub-9041694244207254/2213477090</string>
+    <string name="bannerAddTwo">ca-app-pub-9041694244207254/1333502082</string>
+    <string name="RewardAdd">ca-app-pub-9041694244207254/9860866972</string>
+
+    //Test Ids
+    <string name="testAdsFacebook">IMG_16_9_APP_INSTALL#YOUR_PLACEMENT_ID</string>
+    <string name="testAdsGoogle">ca-app-pub-3940256099942544/6300978111</string>
+
+    //Store links
+    <string name="PlayStore">https://play.google.com/store/apps/details?id=</string>
+    <string name="Samsung">https://apps.samsung.com/appquery/appDetail.as?appId=</string>
+    <string name="Amazon">https://www.amazon.com/dp/B08LGSK7WT/ref=apps_sf_sta</string>
 
 </resources>

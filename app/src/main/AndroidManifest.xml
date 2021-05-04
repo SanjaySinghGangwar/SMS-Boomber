@@ -18,6 +18,7 @@
             android:parentActivityName=".activity.Setting" />
         <activity
             android:name=".activity.Setting"
+            android:hardwareAccelerated="true"
             android:parentActivityName=".activity.MainActivity" />
         <activity android:name=".activity.splashScreen">
             <intent-filter>
