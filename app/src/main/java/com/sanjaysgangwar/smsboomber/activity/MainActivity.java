@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.telephony.SmsManager;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +19,7 @@ import androidx.core.app.ActivityCompat;
 import com.google.android.material.snackbar.Snackbar;
 import com.sanjaysgangwar.smsboomber.R;
 import com.sanjaysgangwar.smsboomber.databinding.ActivityMainBinding;
+import com.sanjaysgangwar.smsboomber.model.mSharedPreference;
 import com.sanjaysgangwar.smsboomber.service.mProgressView;
 
 import static com.sanjaysgangwar.smsboomber.service.validation.isValidText;
@@ -30,6 +32,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     SmsManager smsManager;
     mProgressView mProgressView;
     Intent intent;
+
+    mSharedPreference sharedPreference;
+
     private ActivityMainBinding bind;
 
     @Override
@@ -38,13 +43,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bind = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(bind.getRoot());
         initAllComponent();
+
     }
 
     private void initAllComponent() {
         context = MainActivity.this;
         bind.send.setOnClickListener(this);
+        bind.setting.setOnClickListener(this);
         smsManager = SmsManager.getDefault();
         mProgressView = new mProgressView(this);
+        sharedPreference = new mSharedPreference(this);
+
+        Toast.makeText(context, "" + sharedPreference.getAds(), Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -57,6 +67,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     validateAllFields();
                 }
                 break;
+            case R.id.setting:
+                intent = new Intent(this, Setting.class);
+                startActivity(intent);
+                break;
+
         }
     }
 

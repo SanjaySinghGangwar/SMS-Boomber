@@ -4,5 +4,9 @@
     <string name="bannerAddTwo">ca-app-pub-9041694244207254/1333502082</string>
     <string name="bannerAddOne">ca-app-pub-9041694244207254/2213477090</string>
     <string name="RewardAdd">ca-app-pub-9041694244207254/9860866972</string>
+    <string name="share">Share</string>
+    <string name="other_apps">Other Apps</string>
+    <string name="donate">Donate</string>
+    <string name="ads">Ads</string>
 
 </resources>

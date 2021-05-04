@@ -8,6 +8,14 @@
     android:orientation="vertical"
     tools:context=".activity.MainActivity">
 
+    <ImageView
+        android:id="@+id/setting"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right"
+        android:layout_margin="15dp"
+        android:src="@drawable/ic_settings" />
+
 
     <ScrollView
         android:layout_width="match_parent"
